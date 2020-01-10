@@ -2,12 +2,45 @@
    font-size: 4rem;
    color: #ffffff;
    height: 100vh;
-   background: rgb(0, 75, 127);
+   /* background: rgb(0, 75, 127);
    background: linear-gradient(
       148deg,
       rgba(0, 75, 127, 1) 0%,
       rgba(0, 113, 172, 1) 100%
-   );
+   ); */
+}
+
+@media (min-width: 576px) {
+   .card-hover {
+      transition: all 0.5s;
+      opacity: 0;
+      padding: 8%;
+      background-color: rgba(0, 0, 0, 0.7);
+   }
+   .card-hover:hover {
+      opacity: 1;
+   }
+}
+
+@media (max-width: 577px) {
+   .card-hover {
+      background-color: rgba(0, 0, 0, 0.55);
+   }
+}
+.card-hover h2 {
+   user-select: none;
+}
+
+.card-hover #bottom-right {
+   position: absolute;
+   bottom: 1rem;
+   right: 1rem;
+}
+
+.card-hover #bottom-left {
+   position: absolute;
+   bottom: 1rem;
+   left: 1rem;
 }
 
 @media (max-width: 768px) {
