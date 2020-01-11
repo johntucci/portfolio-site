@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+import LaptopImage from './img/laptop.jpg';
+import ShoppingImage from './img/shopping.jpg';
+import GraphsImage from './img/graphs.jpg';
+import ContactMeImage from './img/phone-on-table.jpg';
+import ProfileImage from './img/profile.jpg';
+
 import ContactForm from './components/ContactForm';
 import ProjectCard from './components/ProjectCard';
 
@@ -21,7 +27,7 @@ function NavBar() {
    return (
       <Navbar expand="lg">
          <Navbar.Brand
-            href="#home"
+            href="#landing"
             style={{
                fontFamily: 'Courier New, Monospace',
                fontSize: '1.5rem'
@@ -132,7 +138,7 @@ function AboutMe() {
          <img
             width={200}
             height={200}
-            src="https://media.licdn.com/dms/image/C5603AQGLK25fZ01ccQ/profile-displayphoto-shrink_200_200/0?e=1583971200&v=beta&t=kPB2SSp7W2YjqRw2c7jAt3qIAHBrGSbsbwj_JpZr3c4"
+            src={ProfileImage}
             alt="My face"
             className="mr-3 shadow"
             style={{ borderRadius: '.25rem' }}
@@ -181,57 +187,43 @@ export default class App extends Component {
 
                <div id="my-projects"></div>
 
-               <Title l1="And These Are" l2="My Projects" />
+               <Title l1="These Are" l2="My Projects" />
                <Spacer height="8vh" />
 
-               <Row
-                  className="py-5 row-cols-1 row-cols-sm-2 row-cols-md-3"
-                  data-aos="fade-up"
-               >
+               <Row className="py-5 row-cols-1 row-cols-sm-2 row-cols-lg-3">
                   <ProjectCard
-                     name="Example Project"
-                     link="https://example.com"
+                     name="My Portfolio"
+                     link="#landing"
                      gitLink="https://github.com"
                      techStack={['react', 'bootstrap']}
-                     image="https://leeklopfers.de/static/Ecommerce-e20614dfbb0018658da9df1a1e1513d8.jpeg"
+                     image={LaptopImage}
+                     samePage={true}
                   />
                   <ProjectCard
-                     name="Example Project"
+                     name="E-Commerce"
                      link="https://example.com"
                      gitLink="https://github.com"
-                     techStack={['react', 'bootstrap']}
-                     image="https://leeklopfers.de/static/Ecommerce-e20614dfbb0018658da9df1a1e1513d8.jpeg"
+                     techStack={['react', 'express', 'mongodb']}
+                     image={ShoppingImage}
                   />
+
                   <ProjectCard
-                     name="Example Project"
+                     name="Admin Panel"
                      link="https://example.com"
                      gitLink="https://github.com"
-                     techStack={['react', 'bootstrap']}
-                     image="https://leeklopfers.de/static/Ecommerce-e20614dfbb0018658da9df1a1e1513d8.jpeg"
-                  />
-                  <ProjectCard
-                     name="Example Project"
-                     link="https://example.com"
-                     gitLink="https://github.com"
-                     techStack={['react', 'bootstrap']}
-                     image="https://leeklopfers.de/static/Ecommerce-e20614dfbb0018658da9df1a1e1513d8.jpeg"
-                  />
-                  <ProjectCard
-                     name="Example Project"
-                     link="https://example.com"
-                     gitLink="https://github.com"
-                     techStack={['react', 'bootstrap']}
-                     image="https://leeklopfers.de/static/Ecommerce-e20614dfbb0018658da9df1a1e1513d8.jpeg"
+                     techStack={['express', 'passport', 'mysql']}
+                     image={GraphsImage}
                   />
                </Row>
             </div>
             <div id="contact-me"></div>
-            <ParallaxImage src="https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress" />
+            <ParallaxImage src={ContactMeImage} />
             <Title l1="Interested? You can" l2="Contact me" />
 
             <div className="container-lg" data-aos="fade-up">
                <ContactForm />
             </div>
+            <Spacer height="15vh" />
 
             <Container fluid className="text-center mb-4" data-aos="fade-up">
                <h1>
@@ -239,6 +231,7 @@ export default class App extends Component {
                   <Underline />
                </h1>
             </Container>
+            <Spacer height="10vh" />
 
             <footer
                className="text-center bg-light"

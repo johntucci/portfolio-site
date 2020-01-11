@@ -1,7 +1,14 @@
 import React from 'react';
 import { Col, Card } from 'react-bootstrap';
 
-export default function ProjectCard({ name, link, gitLink, techStack, image }) {
+export default function ProjectCard({
+   name,
+   link,
+   gitLink,
+   techStack,
+   image,
+   samePage = false
+}) {
    const stacklist = techStack.map((tech) => (
       <span>
          {tech} <br />
@@ -9,15 +16,15 @@ export default function ProjectCard({ name, link, gitLink, techStack, image }) {
    ));
    return (
       <Col>
-         <Card className="text-white mb-4 shadow">
+         <Card className="text-white mb-4 shadow" data-aos="zoom-in">
             <Card.Img className="img-fluid" src={image} />
             <Card.ImgOverlay className="card-hover d-flex align-items-center justify-content-center text-center">
                <div>
                   <h2>{name}</h2>
-                  <h2>
+                  <h2 className="outgoing-link">
                      <a
                         href={link}
-                        target="_blank"
+                        target={samePage ? '' : '_blank'}
                         rel="noopener noreferrer"
                         className="text-white"
                      >

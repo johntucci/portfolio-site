@@ -2,12 +2,14 @@
    font-size: 4rem;
    color: #ffffff;
    height: 100vh;
-   /* background: rgb(0, 75, 127);
+   background: rgb(188, 247, 255);
    background: linear-gradient(
-      148deg,
-      rgba(0, 75, 127, 1) 0%,
-      rgba(0, 113, 172, 1) 100%
-   ); */
+      140deg,
+      rgba(188, 247, 255, 1) 4%,
+      rgba(75, 183, 255, 1) 26%,
+      rgba(75, 183, 255, 1) 76%,
+      rgba(21, 140, 219, 1) 100%
+   );
 }
 
 @media (min-width: 576px) {
@@ -25,6 +27,20 @@
 @media (max-width: 577px) {
    .card-hover {
       background-color: rgba(0, 0, 0, 0.55);
+   }
+   .card-hover h2.outgoing-link a {
+      border: 0.17rem solid #ffffff;
+      border-radius: 8%;
+      width: 8vh;
+      height: 8vh;
+      line-height: 7vh;
+      margin: 0 auto;
+      display: block;
+      transition: all 0.5s;
+      background: none;
+   }
+   .card-hover h2.outgoing-link a:active {
+      background: rgba(255, 255, 255, 0.45);
    }
 }
 .card-hover h2 {
