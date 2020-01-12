@@ -56,11 +56,19 @@ function MainHero() {
          style={{ backgroundColor: config.accentColor }}
          id="landing"
       >
-         <Container className="text-center" data-aos="fade-up">
+         <Container className="text-center">
             <span>
-               <span className="font-weight-bold">Hello.</span>
+               <span className="font-weight-bold" data-aos="fade-up">
+                  Hello.
+               </span>
                <br />
-               <span>You can call me {config.firstName}</span>
+               <span
+                  data-aos="fade-up"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="600"
+               >
+                  You can call me {config.firstName}
+               </span>
             </span>
          </Container>
       </Jumbotron>
@@ -220,12 +228,16 @@ export default class App extends Component {
             <ParallaxImage src={ContactMeImage} />
             <Title l1="Interested? You can" l2="Contact me" />
 
-            <div className="container-lg" data-aos="fade-up">
+            <div
+               className="container-lg"
+               data-aos="flip-up"
+               data-aos-delay="500"
+            >
                <ContactForm />
             </div>
             <Spacer height="15vh" />
 
-            <Container fluid className="text-center mb-4" data-aos="fade-up">
+            <Container fluid className="text-center mb-4" data-aos="zoom-in">
                <h1>
                   <Logo />
                   <Underline />
