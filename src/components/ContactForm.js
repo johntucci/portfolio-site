@@ -11,7 +11,7 @@ export default function ContactForm() {
                </label>
                <div className="col">
                   <input
-                     id="textinput"
+                     id="fullName"
                      name="textinput"
                      type="text"
                      placeholder="Your full name"
@@ -26,7 +26,7 @@ export default function ContactForm() {
                </label>
                <div className="col">
                   <input
-                     id="textinput"
+                     id="emailAddress"
                      name="textinput"
                      type="text"
                      placeholder="Your email address"
@@ -42,7 +42,7 @@ export default function ContactForm() {
                <div className="col">
                   <textarea
                      className="form-control"
-                     id="textarea"
+                     id="messageContent"
                      name="textarea"
                      style={{ minHeight: '12rem' }}
                   ></textarea>

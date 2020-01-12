@@ -208,8 +208,9 @@ export default class App extends Component {
          duration: 600
          // disable: 'mobile'
       });
+      document.title = `${config.firstName} ${config.lastName} - Portfolio`;
    }
-   componentWillUpdate() {
+   componentDidUpdate() {
       AOS.refresh();
    }
    render() {
@@ -270,6 +271,7 @@ export default class App extends Component {
                      />
                   </Row>
                </div>
+               <Spacer height="8vh" />
             </div>
             <ParallaxImage src={ContactMeImage} />
             <div id="contact-me"></div>
