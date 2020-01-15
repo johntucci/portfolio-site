@@ -127,10 +127,7 @@ export default class App extends Component {
           data-aos-delay="400"
         >
           <h1
-            onClick={() => {
-              window.scrollTo(0, 0);
-              AOS.refreshHard();
-            }}
+            onClick={() => window.scrollTo(0, 0)}
             style={{ cursor: "pointer" }}
           >
             <Logo />

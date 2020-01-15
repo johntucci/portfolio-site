@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Logo } from "./Helpers";
+import { Logo, Underline } from "./Helpers";
 
 export default function NavBar() {
   return (
