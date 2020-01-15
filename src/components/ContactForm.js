@@ -3,8 +3,10 @@ import { Col, Button } from "react-bootstrap";
 
 export default function ContactForm() {
   return (
-    <form className="form-horizontal mb-5">
+    <form name="contact" method="post" className="form-horizontal mb-5">
       <fieldset>
+        <input type="hidden" name="form-name" value="contact" />
+
         <div className="form-group" data-aos="fade-right" data-aos-delay="200">
           <label className="col control-label" htmlFor="textinput">
             Name
@@ -12,7 +14,7 @@ export default function ContactForm() {
           <div className="col">
             <input
               id="fullName"
-              name="textinput"
+              name="name"
               type="text"
               placeholder="Your full name"
               className="form-control input-md"
@@ -27,7 +29,7 @@ export default function ContactForm() {
           <div className="col">
             <input
               id="emailAddress"
-              name="textinput"
+              name="email"
               type="text"
               placeholder="Your email address"
               className="form-control input-md"
@@ -43,7 +45,7 @@ export default function ContactForm() {
             <textarea
               className="form-control"
               id="messageContent"
-              name="textarea"
+              name="message"
               style={{ minHeight: "12rem" }}
             ></textarea>
           </div>
