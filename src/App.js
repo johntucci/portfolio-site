@@ -32,7 +32,7 @@ export default class App extends Component {
   componentDidMount() {
     AOS.init({
       delay: 100,
-      once: true,
+      once: false,
       duration: 600
       // disable: 'mobile'
     });
@@ -58,9 +58,19 @@ export default class App extends Component {
             <Spacer height="25vh" />
             <div className="d-flex justify-content-around">
               <div className="flex-grow-1 d-flex justify-content-center">
-                <Dot order={1} anim="fade-right" />
-                <Dot order={2} />
-                <Dot order={3} anim="fade-left" />
+                <Dot
+                  color={Config.accentColor}
+                  order={1}
+                  delay={200}
+                  anim="fade-down"
+                />
+                <Dot color="#fff" order={2} delay={0} duration={800} />
+                <Dot
+                  color={Config.secondaryColor}
+                  order={3}
+                  delay={400}
+                  anim="fade-up"
+                />
               </div>
             </div>
           </div>
@@ -105,14 +115,22 @@ export default class App extends Component {
         <div id="contact-me"></div>
         <Title l1="Interested? You can" l2="Contact me" />
 
-        <div className="container-lg" data-aos="fade-down" data-aos-delay="500">
+        <div className="container-lg">
           <ContactForm />
         </div>
-        <Spacer height="15vh" />
+        <Spacer height="8vh" />
 
-        <Container fluid className="text-center mb-4" data-aos="zoom-in">
+        <Container
+          fluid
+          className="text-center mb-4"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           <h1
-            onClick={() => window.scrollTo(0, 0)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              AOS.refreshHard();
+            }}
             style={{ cursor: "pointer" }}
           >
             <Logo />

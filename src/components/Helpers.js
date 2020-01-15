@@ -46,24 +46,19 @@ function Underline() {
   );
 }
 
-function Dot(props) {
-  const even = {
-    background: "#fff"
-  };
-  const odd = {
-    background: Config.accentColor
-  };
+function Dot({ delay, anim, duration, color = "#fff" }) {
   return (
     <div
       style={{
-        width: "4rem",
-        height: "4rem",
+        width: "2rem",
+        height: "2rem",
         borderRadius: "100%",
-        ...(props.order % 2 === 0 ? even : odd)
+        background: color
       }}
       className="m-4 shadow"
-      data-aos={props.anim ? props.anim : "zoom-in"}
-      data-aos-delay={200 * props.order}
+      data-aos={anim ? anim : "zoom-in"}
+      data-aos-delay={delay}
+      {...(duration ? { "data-aos-duration": duration } : {})}
     />
   );
 }

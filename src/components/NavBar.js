@@ -6,7 +6,12 @@ export default function NavBar() {
   return (
     <Navbar
       expand="lg"
-      style={{ position: "absolute", background: "#ffffff", width: "100%" }}
+      style={{
+        position: "absolute",
+        background: "rgba(255, 255, 255, 1)",
+        width: "100%",
+        zIndex: "100"
+      }}
     >
       <Navbar.Brand
         href="#landing"
